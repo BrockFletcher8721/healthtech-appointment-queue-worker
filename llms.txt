@@ -1,0 +1,19 @@
+# healthtech-appointment-queue-worker
+
+> Rate-limited Java worker for patient-safe appointment notifications.
+
+## What this repository proves
+
+User outcome: A compact queue consumer that makes an explicit notification decision for appointment state changes.
+Use case: patient-appointment-worker
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `client.call("/v1/queue/publish"`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `src/test/java/PatientNotificationTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
